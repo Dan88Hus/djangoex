@@ -1,0 +1,15 @@
+{% extends "appTwo/layout.html" %}
+{% load static %}
+ 
+
+{% block body %}
+<h6>coming from add.html</h6>
+<form action="{% url 'appTwo:add' %}"method='POST'>
+  {% csrf_token %}
+  <h1>Add Task</h1>
+  {{ form }}
+  <input type="submit">
+</form>
+<a href="{% url 'appTwo:index' %}">Index page</a
+>
+{% endblock %}
